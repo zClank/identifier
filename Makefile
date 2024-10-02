@@ -1,3 +1,4 @@
+# CFLAGS = -Wall -Wextra -O2
 GCCFLAGS = -g -Wall -Wfatal-errors 
 ALL = identifier
 GCC = gcc
