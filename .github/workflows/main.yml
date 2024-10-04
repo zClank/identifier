@@ -11,5 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - name: update
+      run: "sudo apt-get update;"
+    - name: apt_get_tools
+      run: "sudo apt-get -y install cppcheck-gui cppcheck clang valgrind"
+    - name: pre_make_cppcheck
+      run: "cd Unity/examples/sort; make cppcheck"
     - name: make
-      run: "make clean; make"
+      run: "cd Unity/examples/sort; make"
+    - name: post_make_cov
+      run: "cd Unity/examples/sort; make cov"
+    - name: post_make_valgrind
+      run: "cd Unity/examples/sort; make valgrind"
+    - name: post_make_sanitizer
+      run: "cd Unity/examples/sort; make sanitizer"
