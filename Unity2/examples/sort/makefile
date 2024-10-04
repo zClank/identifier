@@ -76,7 +76,7 @@ run:
 cov:
 	$(C_COMPILER) $(CFLAGS) -fprofile-arcs -ftest-coverage $(INC_DIRS) $(SRC_FILES1) -o $(TARGET1)
 	./$(TARGET1) -v
-	gcov -b bubble_sort.c counting_sort.c heap_sort.c insertion_sort.c merge_sort.c quick_sort.c radix_sort.c selection_sort.c sort.c
+	gcov -b *.gcno
 
 valgrind:
 	$(C_COMPILER) -g -Wall -Wfatal-errors $(INC_DIRS) $(SRC_FILES1) -o $(TARGET1)
