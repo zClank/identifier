@@ -16,12 +16,12 @@ jobs:
     - name: apt_get_tools
       run: "sudo apt-get -y install cppcheck-gui cppcheck clang valgrind"
     - name: pre_make_cppcheck
-      run: "cd Unity/examples/sort; make cppcheck"
+      run: "cd Unity2/examples/sort; make cppcheck"
     - name: make
-      run: "cd Unity/examples/sort; make"
+      run: "cd Unity2/examples/sort; make"
     - name: post_make_cov
-      run: "cd Unity/examples/sort; make cov"
+      run: "cd Unity2/examples/sort; make cov"
     - name: post_make_valgrind
-      run: "cd Unity/examples/sort; make valgrind"
+      run: "cd Unity2/examples/sort; make valgrind"
     - name: post_make_sanitizer
-      run: "cd Unity/examples/sort; make sanitizer"
+      run: "cd Unity2/examples/sort; make sanitizer"
